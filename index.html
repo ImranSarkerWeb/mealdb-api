@@ -44,35 +44,18 @@
         <h1 class="text-center text-2xl font-bold mb-12">Your Favourite Food</h1>
 
         <section>
-          <div class="grid grid-cols-2 w-[90%] mx-auto gap-6">
-            <div class="card card-side bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
-                <div class="card-body">
-                  <h2 class="card-title">New movie is released!</h2>
-                  <p>Click the button to watch on Jetflix app.</p>
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Watch</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card card-side bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
-                <div class="card-body">
-                  <h2 class="card-title">New movie is released!</h2>
-                  <p>Click the button to watch on Jetflix app.</p>
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Watch</button>
-                  </div>
-                </div>
-              </div>
+          <div id="card-container" class="grid grid-cols-2 w-[90%] mx-auto gap-6">
+           <!-- all card insert here by javascript -->
           </div>
         </section>
+       <div class="text-center">
+        <a class="btn bg-[#FFC107] border-none text-black hover:text-white">Show All</a>
+       </div>
 
     </main>
 
 
-
+<script src="main.js"></script>
 </body>
 
 </html>
