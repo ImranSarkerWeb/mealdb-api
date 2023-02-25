@@ -11,19 +11,67 @@
 
 </head>
 
-<body>
+<body class="bg-white text-black">
 
-    <header class="container mx-auto">
-        <div class="navbar bg-white-100">
+    <header>
+        <div class="navbar container mx-auto bg-white">
             <div class="navbar-start">
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a class="text-xl text-black font-semibold">Tasty HUT</a>
             </div>
-           
+
             <div class="navbar-end">
-                <a class="btn bg-">Get started</a>
+                <a class="btn bg-[#FFC107] border-none text-black hover:text-white">Get started</a>
+            </div>
+        </div>
+        <!-- hero section  -->
+        <div class="hero h-[650px]"
+            style="background-image: url(/images/banner_1.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold text-white">Taste Our Delicious Best Foods</h1>
+                    <p class="mb-5 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                        exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <input type="text" placeholder="Search any food" class="input input-bordered w-full bg-white max-w-xs" />
+                        <a class="btn bg-[#FFC107] border-none text-black hover:text-white -m-4">Search</a>
+                   
+                </div>
             </div>
         </div>
     </header>
+
+    <main class="mt-32">
+        <h1 class="text-center text-2xl font-bold mb-12">Your Favourite Food</h1>
+
+        <section>
+          <div class="grid grid-cols-2 w-[90%] mx-auto gap-6">
+            <div class="card card-side bg-base-100 shadow-xl">
+                <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title">New movie is released!</h2>
+                  <p>Click the button to watch on Jetflix app.</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Watch</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card-side bg-base-100 shadow-xl">
+                <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title">New movie is released!</h2>
+                  <p>Click the button to watch on Jetflix app.</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Watch</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+
+    </main>
+
+
 
 </body>
 
