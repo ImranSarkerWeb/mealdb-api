@@ -1,5 +1,6 @@
 //variables
 const cardContainer = document.getElementById("card-container");
+const showMoreBtn = document.getElementById("show-more")
 const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=ch`;
 
 try {
@@ -7,7 +8,20 @@ try {
     const data = await fetch(url);
     const jsonData = await data.json();
     console.log(jsonData);
-    createElement(jsonData.meals);
+    createElement(jsonData.meals.slice(0,6));
+    let click = true;
+    showMoreBtn.addEventListener('click', function(){
+      if(click){
+        createElement(jsonData.meals);
+        click = false;
+        showMoreBtn.innerText = "Show Less"
+      }else{
+        cardContainer.innerHTML = "";
+        createElement(jsonData.meals.slice(0,6));
+        click = true;
+      }
+      
+    })
   };
   getData(url);
 } catch (error) {
