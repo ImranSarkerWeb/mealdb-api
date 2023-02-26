@@ -34,10 +34,10 @@ function createElement(arrayOfData) {
     const div = document.createElement("div");
     div.classList.add("card", "card-side", "bg-white", "shadow-xl");
     div.innerHTML = `
-        <figure><img class="" src="${element.strMealThumb}" alt="Movie"/></figure>
-        <div class="card-body">
-            <h2 class="card-title">New movie is released!</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+        <figure><img class="h-[100%]" src="${element.strMealThumb}" alt="Movie"/></figure>
+        <div class="card-body w-[85%]">
+            <h2 class="card-title">${element.strMeal}</h2>
+            <p>${element.strInstructions.substring(0,300)}...</p>
 
             <div class="card-actions">
                 <button class="btn">Details</button>
