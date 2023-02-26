@@ -37,9 +37,9 @@ try {
   };
   getData(url);
   searchBtn.addEventListener('click', function(){
-    getSearchData();
+    ;
     cardContainer.innerHTML = ''
-    getData(url);
+    getData(getSearchData());
   })
 } catch (error) {
   console.log(error);
