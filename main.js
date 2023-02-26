@@ -65,9 +65,3 @@ function createElement(arrayOfData) {
   });
 }
 
-/* 
-<div class="card card-side bg-base-100 shadow-xl">
-                
-              </div>
-
-*/
