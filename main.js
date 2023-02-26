@@ -1,7 +1,19 @@
 //variables
 const cardContainer = document.getElementById("card-container");
 const showMoreBtn = document.getElementById("show-more")
-const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=ch`;
+const serchField = document.getElementById("search-field");
+const searchBtn = document.getElementById('search-btn');
+let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=ch`
+const getSearchData = () =>{
+ if(serchField.value){
+  const value = serchField.value;
+  url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`;
+  return url;
+ }else{
+  serchField.style.border = "2px solid red"
+ }
+}
+
 
 try {
   const getData = async (url) => {
@@ -24,6 +36,12 @@ try {
     })
   };
   getData(url);
+  searchBtn.addEventListener('click', function(){
+    getSearchData();
+    cardContainer.innerHTML = ''
+    console.log('hi')
+    getData(url);
+  })
 } catch (error) {
   console.log(error);
 }
@@ -45,8 +63,6 @@ function createElement(arrayOfData) {
         </div>
         `;
         cardContainer.appendChild(div)
-    console.log(element);
-    console.log(div);
   });
 }
 
