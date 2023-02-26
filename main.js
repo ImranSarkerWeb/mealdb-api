@@ -39,7 +39,6 @@ try {
   searchBtn.addEventListener('click', function(){
     getSearchData();
     cardContainer.innerHTML = ''
-    console.log('hi')
     getData(url);
   })
 } catch (error) {
@@ -53,7 +52,7 @@ function createElement(arrayOfData) {
     div.classList.add("card", "card-side", "bg-white", "shadow-xl");
     div.innerHTML = `
         <figure><img class="h-[100%]" src="${element.strMealThumb}" alt="Movie"/></figure>
-        <div class="card-body w-[85%]">
+        <div class="card-body w-[75%] md:w-[85%]">
             <h2 class="card-title">${element.strMeal}</h2>
             <p>${element.strInstructions.substring(0,300)}...</p>
 
